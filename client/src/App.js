@@ -3,10 +3,17 @@ import './App.css';
 
 import Jobs from './Jobs';
 
+const mockjobs = [
+  {
+    "title": "SWE", 
+    "company": "Google"
+  }
+];
+
 function App() {
   return (
     <div className="App">
-      <Jobs />
+      <Jobs jobs={mockjobs}/>
     </div>
   );
 }
