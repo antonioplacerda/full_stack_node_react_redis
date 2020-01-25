@@ -4,14 +4,16 @@
   "description": "create a full stack app using react node and redis",
   "main": "app.js",
   "dependencies": {
-    "@types/cron": "^1.7.1",
-    "@types/node": "^7.0.22",
-    "@types/node-fetch": "^2.5.4",
     "cron": "^1.8.2",
     "node-fetch": "^2.6.0",
+    "redis": "^2.8.0",
     "typescript": "^3.3.3333"
   },
   "devDependencies": {
+    "@types/cron": "^1.7.1",
+    "@types/node": "^7.0.22",
+    "@types/node-fetch": "^2.5.4",
+    "@types/redis": "^2.8.14",
     "concurrently": "^2.2.0",
     "nodemon": "^1.18.10"
   },
