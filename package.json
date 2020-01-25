@@ -1,0 +1,41 @@
+{
+  "name": "full_stack_node_react_redis",
+  "version": "1.0.0",
+  "description": "create a full stack app using react node and redis",
+  "main": "app.js",
+  "dependencies": {
+    "@types/cron": "^1.7.1",
+    "@types/node": "^7.0.22",
+    "@types/node-fetch": "^2.5.4",
+    "cron": "^1.8.2",
+    "node-fetch": "^2.6.0",
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "start": "npm run start-worker",
+    "start-worker": "tsc --build worker/tsconfig.json && node worker/dist",
+    "build": "npm run build-worker",
+    "dev-worker": "concurrently --kill-others \"tsc --build worker/tsconfig.json -w\" \"nodemon worker/dist\"",
+    "build-worker": "tsc --build worker/tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonioplacerda/full_stack_node_react_redis.git"
+  },
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "react",
+    "redis"
+  ],
+  "author": "Antonio P. Lacerda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonioplacerda/full_stack_node_react_redis/issues"
+  },
+  "homepage": "https://github.com/antonioplacerda/full_stack_node_react_redis#readme"
+}
