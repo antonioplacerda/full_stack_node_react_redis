@@ -1,5 +1,4 @@
 import { CronJob } from 'cron';
+import fetchGithub from './tasks/fetch-github';
 
-new CronJob('* * * * * *', () => {
-    console.log('You will see this every second')
-}, null, true, 'Europe/Lisbon')
+new CronJob('0,30 * * * *', () => fetchGithub, null, true, 'Europe/Lisbon')
