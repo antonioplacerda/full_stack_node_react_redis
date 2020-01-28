@@ -5,24 +5,27 @@
   "main": "app.js",
   "dependencies": {
     "cron": "^1.8.2",
+    "express": "^4.17.1",
     "node-fetch": "^2.6.0",
     "redis": "^2.8.0",
     "typescript": "^3.3.3333"
   },
   "devDependencies": {
     "@types/cron": "^1.7.1",
-    "@types/node": "^7.0.22",
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.5.0",
     "@types/node-fetch": "^2.5.4",
     "@types/redis": "^2.8.14",
     "concurrently": "^2.2.0",
     "nodemon": "^1.18.10"
   },
   "scripts": {
+    "tsc": "tsc",
     "start": "npm run start-worker",
     "start-worker": "tsc --build worker/tsconfig.json && node worker/dist",
-    "build": "npm run build-worker",
-    "dev-worker": "concurrently --kill-others \"tsc --build worker/tsconfig.json -w\" \"nodemon worker/dist\"",
-    "build-worker": "tsc --build worker/tsconfig.json"
+    "build": "tsc",
+    "dev:worker": "concurrently --kill-others \"tsc -w\" \"nodemon server/dist/worker\"",
+    "dev:api": "concurrently --kill-others \"tsc -w\" \"nodemon server/dist/api\""
   },
   "repository": {
     "type": "git",
