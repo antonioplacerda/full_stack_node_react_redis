@@ -11,7 +11,7 @@ const getAsync = promisify(client.get).bind(client);
 
 app.get('/jobs', async (req, res) => {
     const jobs = await getAsync('github');
-    res.header("Access-Control-Allow-Origin", "http://localhost:8080")
+    res.header("Access-Control-Allow-Origin", "https://salty-badlands-66972.herokuapp.com/")
     res.send(jobs);
 });
 
