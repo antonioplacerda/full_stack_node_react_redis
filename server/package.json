@@ -24,7 +24,7 @@
     "start": "concurrently 'npm run start:worker' 'npm run start:api'",
     "start:worker": "node dist/worker",
     "start:api": "node dist/api",
-    "build": "tsc",
+    "build": "npm run tsc",
     "dev:worker": "concurrently --kill-others \"tsc -w\" \"nodemon server/dist/worker\"",
     "dev:api": "concurrently --kill-others \"tsc -w\" \"nodemon server/dist/api\""
   },
