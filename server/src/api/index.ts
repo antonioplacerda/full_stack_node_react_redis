@@ -5,6 +5,7 @@ import { promisify } from 'util';
 const app = express();
 const port = 3001;
 
+console.log(process.env.REDIS_URL);
 const client = createClient(process.env.REDIS_URL);
 const getAsync = promisify(client.get).bind(client);
 
