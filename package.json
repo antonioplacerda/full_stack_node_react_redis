@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "create a full stack app using react node and redis",
 	"main": "app.js",
-	"devDependencies": {
+	"dependencies": {
 		"concurrently": "^2.2.0"
 	},
 	"scripts": {
