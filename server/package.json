@@ -22,7 +22,7 @@
   "scripts": {
     "tsc": "tsc",
     "start": "concurrently 'npm run start:worker' 'npm run start:api'",
-    "start:worker": "node dist/worker",
+    "start:worker": "node dist/worker/tasks/fetch-github && node dist/worker",
     "start:api": "node dist/api",
     "build": "npm run tsc",
     "dev:worker": "concurrently --kill-others \"tsc -w\" \"nodemon server/dist/worker\"",
