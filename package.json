@@ -4,16 +4,18 @@
 	"description": "create a full stack app using react node and redis",
 	"main": "app.js",
 	"dependencies": {
+		"express": "^4.17.1",
 		"concurrently": "^2.2.0"
 	},
+	"proxy": "http://localhost:8080",
 	"scripts": {
 		"install": "concurrently 'npm run install:client' 'npm run install:server'",
 		"install:client": "cd client && npm install",
 		"install:server": "cd server && npm install",
 		"build": "concurrently 'npm run build:client' 'npm run build:server'",
-		"build:client": "cd client",
+		"build:client": "cd client && npm run build",
 		"build:server": "cd server && npm run build",
-		"start": "concurrently 'npm run start:client' 'npm run start:server'",
+		"start": "concurrently 'node app.js' 'npm run start:server'",
 		"start:client": "cd client && npm start",
 		"start:server": "cd server && npm start",
 		"postinstall": "npm run build"
