@@ -5,7 +5,7 @@ import { promisify } from 'util';
 const app = express();
 const port = 3001;
 
-const client = createClient();
+const client = createClient(process.env.REDIS_URL);
 const getAsync = promisify(client.get).bind(client);
 
 app.get('/jobs', async (req, res) => {

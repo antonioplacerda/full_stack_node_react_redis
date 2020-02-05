@@ -4,7 +4,7 @@ const { promisify } = require('util');
 
 const baseURL = 'https://jobs.github.com/positions.json';
 
-const client = createClient();
+const client = createClient(process.env.REDIS_URL);
 const setAsync = promisify(client.set).bind(client);
 
 export default async function fetchGithub() {
