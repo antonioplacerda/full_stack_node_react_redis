@@ -3,7 +3,7 @@ import './App.css';
 
 import Jobs from './Jobs';
 
-const JOBS_API_URL = 'http://localhost:3001/jobs';
+const JOBS_API_URL = 'http://localhost:8080/jobs';
 
 async function fecthJobs(updateCB) {
   const res = await fetch(JOBS_API_URL);

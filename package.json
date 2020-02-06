@@ -5,6 +5,7 @@
 	"main": "app.js",
 	"dependencies": {
 		"express": "^4.17.1",
+		"redis": "^2.8.0",
 		"concurrently": "^2.2.0"
 	},
 	"proxy": "http://localhost:8080",
@@ -33,7 +34,7 @@
 	"author": "Antonio P. Lacerda",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/antonioplacerda/full_stack_node_react_redis/issues"
+		"url": "https://github.com/antonioplacerda/full_stack_node_react_redis/Îissues"
 	},
 	"homepage": "https://github.com/antonioplacerda/full_stack_node_react_redis#readme"
 }
